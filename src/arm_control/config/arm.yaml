@@ -1,0 +1,62 @@
+arm_driver:
+  ros__parameters:
+    publish_rate_hz: 30.0
+    max_delta_default: 0.05
+    motors_enabled: false  # gate for real hardware
+    joint_configs:
+      shoulder_pitch:
+        type: fake
+        motor_id: 1
+        direction: 1.0
+        offset: 0.0
+        lower_limit: -1.57
+        upper_limit: 1.57
+        max_delta: 0.05
+      shoulder_yaw:
+        type: fake
+        motor_id: 2
+        direction: 1.0
+        offset: 0.0
+        lower_limit: -1.57
+        upper_limit: 1.57
+        max_delta: 0.05
+      shoulder_roll:
+        type: fake
+        motor_id: 3
+        direction: 1.0
+        offset: 0.0
+        lower_limit: -1.57
+        upper_limit: 1.57
+        max_delta: 0.05
+      elbow_flex:
+        type: fake
+        motor_id: 4
+        direction: 1.0
+        offset: 0.0
+        lower_limit: -2.35
+        upper_limit: 0.52
+        max_delta: 0.05
+      wrist_pitch:
+        type: wrist_differential
+        role: pitch
+        servo_a_id: 5
+        servo_b_id: 6
+        servo_a_direction: 1.0
+        servo_b_direction: -1.0
+        servo_a_offset: 0.0
+        servo_b_offset: 0.0
+        lower_limit: -1.57
+        upper_limit: 1.57
+        max_delta: 0.05
+      wrist_roll:
+        type: wrist_differential
+        role: roll
+        servo_a_id: 5
+        servo_b_id: 6
+        servo_a_direction: 1.0
+        servo_b_direction: 1.0
+        servo_a_offset: 0.0
+        servo_b_offset: 0.0
+        lower_limit: -3.14
+        upper_limit: 3.14
+        max_delta: 0.05
